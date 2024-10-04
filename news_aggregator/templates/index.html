@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered News Aggregator</title>
+</head>
+<body>
+    <h1>News Articles</h1>
+    <ul>
+        {% for article in articles %}
+            <li>
+                <h2>{{ article['title'] }}</h2>
+                <p><strong>Summary:</strong> {{ article['summary'] }}</p>  <!-- Added "Summary:" label -->
+                <p><strong>Sentiment:</strong> {{ article['sentiment'] }}</p>
+                <p><strong>Category:</strong> {{ article['category'] }}</p>  <!-- Added category display -->
+                <a href="{{ article['url'] }}">Read more</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
